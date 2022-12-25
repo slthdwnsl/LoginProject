@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context=".MainActivity">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:background="@color/purple_700">
+
+            <TextView
+                android:id="@+id/textView_login_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/white"
+                android:text="환영합니다!"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+            <TextView
+                android:id="@+id/textView_login_instruction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="계속하려면 로그인을 해주세요"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-50dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/border"
+            android:padding="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/RL_email"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border">
+                
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/imageViewEmail"
+                    android:src="@drawable/ic_outline_email_24"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:id="@+id/textView_login_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:text="이메일*"
+                    android:layout_toEndOf="@id/imageViewEmail" />
+                
+                <View
+                    android:layout_width="250dp"
+                    android:layout_height="1dp"
+                    android:id="@+id/divider_email"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/textView_login_email"
+                    android:background="@android:color/darker_gray"/>
+
+                <EditText
+                    android:id="@+id/editText_login_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView_login_email"
+                    android:background="@android:color/transparent"
+                    android:layout_toEndOf="@id/imageViewEmail"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textCursorDrawable="@drawable/edittextcursor"
+                    android:hint="이메일을 입력해주세요"
+                    android:inputType="textEmailAddress"
+                    android:padding="6dp"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/RL_pwd"
+                android:layout_below="@id/RL_email"
+                android:background="@drawable/border"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/imageViewPwd"
+                    android:src="@drawable/ic_outline_lock_24"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:id="@+id/textView_login_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/imageViewPwd"
+                    android:padding="6dp"
+                    android:text="비밀번호*" />
+
+                <View
+                    android:layout_width="250dp"
+                    android:layout_height="1dp"
+                    android:id="@+id/divider_pwd"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/textView_login_pwd"
+                    android:background="@android:color/darker_gray"/>
+
+                <EditText
+                    android:id="@+id/editText_login_pwd"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView_login_pwd"
+                    android:layout_toEndOf="@id/imageViewPwd"
+                    android:background="@android:color/transparent"
+                    android:textCursorDrawable="@drawable/edittextcursor"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="비밀번호를 입력해주세요"
+                    android:inputType="textPassword"
+                    android:padding="6dp"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/imageView_show_hide_pwd"
+                    android:layout_width="30dp"
+                    android:layout_height="32dp"
+                    android:layout_below="@id/textView_login_pwd"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"/>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/button_login"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/RL_pwd"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:text="로그인" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/button_login"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_register"
+                    android:layout_marginTop="30dp"
+                    android:text="계정이 없으신가요?"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_register_link"
+                    android:text="@string/회원가입"
+                    android:textColor="@color/purple_700"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/button_login"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_forgot_password"
+                    android:layout_marginTop="30dp"
+                    android:text="비밀번호를 잊으셨나요?"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_forgot_password_link"
+                    android:text="@string/click_here_to_reset"
+                    android:textColor="@color/purple_700"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:elevation="10dp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

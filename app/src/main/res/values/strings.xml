@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LoginProject</string>
+    <string name="회원가입"><u>회원가입</u></string>
+    <string name="click_here_to_reset"><u>여기를 눌러 초기화를 하세요</u></string>
+    <string name="upload_pic_u">프로필 사진 업로드</string>
+    <string name="update_email_u">이메일 변경하기</string>
+</resources>
