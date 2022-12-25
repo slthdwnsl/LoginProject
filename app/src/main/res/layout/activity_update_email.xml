@@ -262,7 +262,7 @@
                     android:layout_below="@id/RL_new_email"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="20dp"
-                    android:text="Update Email" />
+                    android:text="이메일 변경" />
 
 
 

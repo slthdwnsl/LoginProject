@@ -41,6 +41,8 @@ public class UpdateEmailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_email);
 
+        getSupportActionBar().setTitle("이메일 변경");
+
         progressBar = findViewById(R.id.progressBar);
         editTextPwd = findViewById(R.id.editText_update_email_verify_password);
         editTextNewEmail = findViewById(R.id.editText_update_email_new);
